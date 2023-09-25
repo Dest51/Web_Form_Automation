@@ -1,0 +1,3 @@
+# ignore ALL files in ANY directory named .vs
+.vs/
+.DS_Store/
