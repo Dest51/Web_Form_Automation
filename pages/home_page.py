@@ -9,6 +9,12 @@ class HomePage:
         logout_button.click()
 
     def is_login_successfull(self):
-        flash_message = self.driver.find_element(By.CLASS_NAME, "flash success").text
-        print("flash message is: ", flash_message)
-        assert flash_message == " You logged into a secure area! "
+        flash_message_text = self.driver.find_element(By.CSS_SELECTOR, "div[data-alert].flash.success").text
+        expected_message = "You logged into a secure area"
+        message_without_line_breaks = flash_message_text.replace("\n", " ")
+        flash_message_cleaned = message_without_line_breaks.split("!")[0].strip()
+        expected_message_cleaned = expected_message.strip()
+        print("cleaned flash message is:", flash_message_cleaned)
+        print("expected cleaned flash message is:", expected_message_cleaned)
+
+        assert flash_message_cleaned == expected_message_cleaned
