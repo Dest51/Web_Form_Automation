@@ -3,6 +3,9 @@ from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.home_page import HomePage
 
+# Run test:
+# python -m unittest tests/test_cross_browser.py
+
 class CrossBrowserTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
