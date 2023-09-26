@@ -1,4 +1,6 @@
 .DS_Store
 .vs/
 pages/__pycache__/
-/tests/__pycache__/
+tests/__pycache__/
+utils/__pycache__/
+utils/keys.py
