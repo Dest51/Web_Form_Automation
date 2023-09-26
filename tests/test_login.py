@@ -167,7 +167,7 @@ class LoginTest(unittest.TestCase):
         keyboard.write("SuperSecretPassword!")
         keyboard.press_and_release("tab")
         keyboard.press_and_release("enter")
-        time.sleep(0.1)
+        time.sleep(2)
         self.home_page.is_login_successfull()
 
     # Title: Title: Checking for possibility to make line breaks in the fields				
@@ -175,7 +175,9 @@ class LoginTest(unittest.TestCase):
         """
         Unsuccessful login. Line breaks test
         """
-        username_with_line_break = "tomsm\nith"
+        username_with_line_break = """tomsm
+        ith
+        """
         self.login_page.open()
         keyboard.press_and_release("tab, tab")
         keyboard.write(username_with_line_break)
@@ -183,6 +185,7 @@ class LoginTest(unittest.TestCase):
         keyboard.write("SuperSecretPassword!")
         keyboard.press_and_release("tab")
         keyboard.press_and_release("enter")
+        time.sleep(2)
         self.login_page.is_login_unsuccessfull_username()
 
 if __name__ == "__main__":
