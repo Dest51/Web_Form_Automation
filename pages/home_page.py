@@ -14,7 +14,5 @@ class HomePage:
         message_without_line_breaks = flash_message_text.replace("\n", " ")
         flash_message_cleaned = message_without_line_breaks.split("!")[0].strip()
         expected_message_cleaned = expected_message.strip()
-        print("cleaned flash message is:", flash_message_cleaned)
-        print("expected cleaned flash message is:", expected_message_cleaned)
 
         assert flash_message_cleaned == expected_message_cleaned
