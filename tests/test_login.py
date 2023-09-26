@@ -3,7 +3,6 @@ import keyboard
 from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.home_page import HomePage
-from utils.keys import Keys
 import time
 
 class BaseTest(unittest.TestCase):
