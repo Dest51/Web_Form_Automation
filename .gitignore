@@ -1,5 +1,6 @@
 .DS_Store
 .vs/
+__pycache__/
 pages/__pycache__/
 tests/__pycache__/
 utils/__pycache__/
